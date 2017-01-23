@@ -24,6 +24,9 @@ if [ -z "${SPARK_DOWNLOAD_URL:-}" ]; then
             5.4)
                 SPARK_HADOOP_DL=hadoop2.6
             ;;
+            5.5)
+                SPARK_HADOOP_DL=hadoop2.6
+            ;;
             CDH4)
                 SPARK_HADOOP_DL=cdh4
             ;;
@@ -35,7 +38,8 @@ if [ -z "${SPARK_DOWNLOAD_URL:-}" ]; then
         esac
     fi
 
-    SPARK_DOWNLOAD_URL="http://archive.apache.org/dist/spark/spark-$DIB_SPARK_VERSION/spark-$DIB_SPARK_VERSION-bin-$SPARK_HADOOP_DL.tgz"
+    # SPARK_DOWNLOAD_URL="http://archive.apache.org/dist/spark/spark-$DIB_SPARK_VERSION/spark-$DIB_SPARK_VERSION-bin-$SPARK_HADOOP_DL.tgz"
+    SPARK_DOWNLOAD_URL="http://archive.apache.org/dist/spark/spark-2.1.0/spark-2.1.0-bin-hadoop2.6.tgz"
 fi
 
 echo "Downloading SPARK"

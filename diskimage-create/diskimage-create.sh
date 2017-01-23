@@ -554,7 +554,8 @@ if [ -z "$PLUGIN" -o "$PLUGIN" = "spark" ]; then
 
     COMMON_ELEMENTS="$JAVA_ELEMENT swift_hadoop spark"
     if [ "$DIB_SPARK_VERSION" == "1.6.0" ]; then
-        export DIB_CDH_VERSION="5.4"
+        # export DIB_CDH_VERSION="5.4"
+        export DIB_CDH_VERSION="5.5"
         ubuntu_elements_sequence="$COMMON_ELEMENTS hadoop-cloudera"
     else
         export DIB_CDH_VERSION=$HADOOP_VERSION
